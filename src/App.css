@@ -1,0 +1,123 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* text-align: center; */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+button{
+  margin-top: 1rem;
+  width: 8rem;
+  margin-right: 1rem;
+  color: bisque;
+  background-color: rgb(39, 127, 200);
+}
+
+button:hover { 
+  background-color: rgb(11, 98, 169);
+  filter: drop-shadow(0 0 .06em rgb(11, 98, 169));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.progressbar{
+  display: flex;
+  align-self: center;
+ border: 1px solid black;
+ width: 40vw;
+ height: 1rem;
+ border-radius: 1rem;
+}
+
+input{
+  width: 30vw;
+  padding: .5rem;
+  margin-top: .2rem;
+  margin-bottom: .5rem;
+}
+.progressbar div{
+  width: 33.3%;
+  height: 100%;
+  background-color:rgb(39, 127, 200);
+  border-radius: 1rem;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 4px;
+  padding: 1rem;
+}
+
+.personal{
+  padding-left: 3rem;
+}
+
+.detail{
+  padding-left: 3rem;
+}
+
+#radio{
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Align radio buttons vertically */
+  width: 20vw;
+  margin: .5rem;
+}
+
+#radio input{
+  margin-top: .8rem;
+}
+
+h2{
+  text-align: center;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm{
+  display: grid;
+  grid-template-columns:50% auto;
+  padding: 2rem;
+  border: 1px solid;
+  margin-bottom: 1rem;
+}
+
+.agree{
+  display: flex;
+  margin-bottom: 1rem;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
