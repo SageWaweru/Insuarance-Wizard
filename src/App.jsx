@@ -5,8 +5,7 @@ import Confirm from './Confirm';
 import Details from './Details';
 
 function App() {
-  const [page, setPage] = useState(0);
-  const [data, setData] = useState({
+  const initialData={
     Name:"",
     Birthday:"",
     Email:"",
@@ -17,8 +16,11 @@ function App() {
     PreferredAmount:"",
     ExistingInsurance:"",
     CurrentInsurer:"None",
-  })
+  }
 
+  const [page, setPage] = useState(0);
+  const [data, setData] = useState(initialData);
+  
   const validateFields = () => {
     if (page === 0) {
       return data.Name && data.Birthday && data.Email && data.Phone && data.Address;
@@ -34,6 +36,8 @@ function App() {
         const checkbox = document.getElementById('termsCheckbox');
         if (checkbox && checkbox.checked) {
           alert('Form Submitted Successfully!');
+          setData(initialData);
+          setPage(0);
         } else {
           alert('Please agree to the terms and conditions before submitting.');
         }
